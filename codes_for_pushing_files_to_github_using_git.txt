@@ -1,0 +1,84 @@
+How to push your windows local machine files to github repository using the 'git bash'?
+
+1. Go to desktop 
+
+2. right click anywhere on the desktop and select the option 'git bash here'
+
+3. pwd ( command to check the current directory. Your selected current directory is 'Desktop')
+
+4. cd data_science_projects (create working directory 'data_science_projects' within 'Desktop')
+
+5. git config --global user.name 'Anuj Srivastava' (globally defining user name. in this case it is 'Anuj Srivastava')
+
+6. git config --global user.email anujsrivastava.analyst@gmail.com (globally defining the user email. in this case it is 'anujsrivastava.analyst@gmail.com'. recommended
+   to use your github email)
+
+7. git config --global core.autocrlf true (convert 'crlf' (windows) file format to 'lf' (mac) format) when the code is moved to cloud repository and also
+   converconvert the 'lf' format to 'crlf' format while the code is move to the local window machine)
+
+8. git init (creates .git file in the working directory)
+
+9. git remote add origin https://github.com/anujsrivastavaanalyst/Data_Science.git (select the github cloud repository where you want to push the file. In this case 
+   the the github repository is 'Data_Science' and 'anujsrivastavaanalyst' is the github user name)
+
+10. git remote -v (used to check which repository of github is linked to working directory. In this case the working directory is 'data_science_projects' which we have
+   created in step number 4 and the github repository is 'Data_Science')
+
+11. git status (command to check the current status of file pushing process)
+
+12. touch f1.py (used to create file with filename f1)
+
+13. echo 'Hello Everyone! We are going to develop some simple machine learning model in this module' > f2.py (used to write one line as well as to create
+    file with filename f2. syntax is echo 'write line')
+
+14. cat f2.py (used to see the content of file f2) 
+
+15. echo 'We will be working on a complete end to end project in this learning' >> f2.py (>> is used to add one more line after the previous line)
+
+16. vim f3.py (vim is called vim editor. creates file with filename f3 and opens the editor. used to write multiple line of codes in the file)
+
+17. press 'i' to enter the insert mode in the vim editor to write the code
+
+18. write some line of codes in file f3
+
+19. press esc to exit the insert mode after writing the code
+
+20. write :wq to exit the vim editor
+
+21. git add f1.py ( moves the file f1 to the staging area from the working directory)
+
+22. git add f1.py f2.py (moves 2 files f1, and f2 to the staging area)
+
+23. git add *.py (moves all the .py files to the staging area)
+
+24. git add . (moves all the files to the staging area)
+
+25. git commit -m 'commit #1' ( sends all the files to the local repository and creates the history of commit with meta data. m-stands for message. 'commit #1' is the
+    message to create a time series of commit history)
+
+26. git log ( shows the commit log/history with author name, date and time of commit)
+
+27. git push -f origin main (moves all the files to the github repository)
+
+
+How to delete files from the cloud repository (github)?
+
+1. rm f1.py (type rm f1.py command in git and it will delete the file f1)
+
+2. git add . (moves all the files to the staging area)
+
+3. git commit -m 'commit #2' (this is the second commit. all of the files will be moved to the local repository)
+
+4. git push -f origin main (push the updated files to the cloud repository)
+
+5. A github dialog box will be open and enter your github credentials
+
+6. check your github repository. There will not be any file with name f1.py
+
+
+How to run python file from the git bash?
+
+python f3.py
+
+
+
